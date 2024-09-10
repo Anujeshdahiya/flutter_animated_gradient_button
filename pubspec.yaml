@@ -1,6 +1,6 @@
 name: flutter_animated_gradient_button
-description: "A flutter widget for animated gradient button."
-version: 0.0.2
+description: "Create a Flutter widget for a button with an animated gradient effect"
+version: 0.0.2+1
 homepage: https://github.com/Anujeshdahiya/flutter_animated_gradient_button.git
 
 environment:

@@ -42,10 +42,10 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: Container(
               width: double.infinity,
-                        height: 100,
+              height: 100,
               child: const Column(
-                 mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AnimatedGradientButton(
                     btnText: "FAG_Button",

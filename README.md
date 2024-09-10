@@ -12,7 +12,7 @@ and the Flutter guide for
 -->
 
 # flutter_animated_gradient_button
-A flutter widget for animated gradient button.
+Create a Flutter widget for a button with an animated gradient effect.
 
 # Using AnimatedGradientButton objects directly
 

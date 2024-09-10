@@ -1,10 +1,7 @@
 library flutter_animated_gradient_button;
 
 import 'dart:ui';
-
-
 import 'package:flutter/material.dart';
-
 import 'package:flutter_animate/flutter_animate.dart';
 
 class AnimatedGradientButton extends StatefulWidget {
@@ -27,7 +24,7 @@ class AnimatedGradientButton extends StatefulWidget {
 }
 
 class _AnimatedGradientButtonState extends State<AnimatedGradientButton> {
-   final animationsMap = <String, AnimationInfo>{};
+  final animationsMap = <String, AnimationInfo>{};
   @override
   void initState() {
     // TODO: implement initState
@@ -41,27 +38,28 @@ class _AnimatedGradientButtonState extends State<AnimatedGradientButton> {
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 0.0.ms,
-            begin: Offset(5.0, 5.0),
-            end: Offset(5.0, 5.0),
+            begin: const Offset(5.0, 5.0),
+            end: const Offset(5.0, 5.0),
           ),
           MoveEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 2000.0.ms,
-            begin: Offset(-100.0, 0.0),
-            end: Offset(100.0, 0.0),
+            begin: const Offset(-100.0, 0.0),
+            end: const Offset(100.0, 0.0),
           ),
           MoveEffect(
             curve: Curves.easeInOut,
             delay: 2000.0.ms,
             duration: 2000.0.ms,
-            begin: Offset(200.0, 0.0),
-            end: Offset(-200.0, 0.0),
+            begin: const Offset(200.0, 0.0),
+            end: const Offset(-200.0, 0.0),
           ),
         ],
       ),
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -91,34 +89,33 @@ class _AnimatedGradientButtonState extends State<AnimatedGradientButton> {
                       widget.color3!,
                       widget.color4!,
                     ],
-                    stops: [0.1, 0.5, 0.9, 1],
-                    begin: AlignmentDirectional(1, 0),
-                    end: AlignmentDirectional(-1, 0),
+                    stops: const [0.1, 0.5, 0.9, 1],
+                    begin: const AlignmentDirectional(1, 0),
+                    end: const AlignmentDirectional(-1, 0),
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ).animateOnPageLoad(
                   animationsMap['containerOnPageLoadAnimation']!),
               Padding(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: Container(
                   width: double.infinity,
                   height: 100,
                   decoration: BoxDecoration(
-                    color: Color(0x87000000),
+                    color: const Color(0x87000000),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: const AlignmentDirectional(0, 0),
                   child: Text(
                     widget.btnText!,
                     style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          color:
-                              Colors.white,
-                          fontSize: 16,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      fontFamily: 'Poppins',
+                      color: Colors.white,
+                      fontSize: 16,
+                      letterSpacing: 0.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -129,8 +126,6 @@ class _AnimatedGradientButtonState extends State<AnimatedGradientButton> {
     );
   }
 }
-
-
 
 enum AnimationTrigger {
   onPageLoad,
